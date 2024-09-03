@@ -1,0 +1,41 @@
+##SEND FETCH SONGS REQUEST
+
+
+GET http://localhost:3000
+Content-Type: application/json
+
+{
+    "title": "wahala",
+    "artists": ["Bien","Harman","Don"],
+    "releasedDate": "2024-07-27",
+    "duration": "02:34"
+}
+
+
+
+##SEND FETCH SONGS REQUEST 
+# POST http://localhost:3000/songs
+# Content-Type: application/json
+
+# {
+#     "title": "wahala",
+#     "artists": ["Bien"],
+#     "releasedDate": "2024-07-27",
+#     "duration": "02:34"
+# }
+
+# ##Find SONGS Request
+# send Request
+# GET https://localhost:3000/songs/1
+
+# ##Create new songs Request
+
+# POST https://localhost:3000/songs
+
+##update songs Request
+
+# PUT https://localhost:3000/songs/1
+
+# ## delete songs Request
+
+# DELETE https://localhost:3000/songs/1
