@@ -1,14 +1,14 @@
 ##SEND FETCH SONGS REQUEST
 
 
-GET http://localhost:3000
+POST  http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "title": "wahala",
-    "artists": ["Bien","Harman","Don"],
-    "releasedDate": "2024-07-27",
-    "duration": "02:34"
+    "firstName": "harman",
+    "lastName": "muasa",
+    "email": "harman.muasa@gmail.com",
+    "password": "12345"
 }
 
 
