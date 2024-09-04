@@ -5,6 +5,8 @@ import { UsersModule } from 'src/users/users.module';
 import { authConstants } from './dto/auth.constants';
 import {JwtModule} from '@nestjs/jwt'
 import {JwtStrategy} from './jwt-strategy'
+import { ApiKeyStrategy } from './api-key-strategy';
+import { ArtistsModule } from 'src/artists/artists.module';
 
 @Module({
   imports: [UsersModule,JwtModule.register({
@@ -12,8 +14,8 @@ import {JwtStrategy} from './jwt-strategy'
     signOptions: {
       expiresIn: '1d',
     },
-  })],
-  providers: [AuthService,JwtStrategy],
+  }),ArtistsModule],
+  providers: [AuthService,JwtStrategy,ApiKeyStrategy],
   controllers: [AuthController],
   exports: [AuthService]
 })

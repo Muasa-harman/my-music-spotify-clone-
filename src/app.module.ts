@@ -14,6 +14,9 @@ import { Artist } from './artists/artist.entity';
 import { User } from './users/user.entity';
 import { PlaylistsModule } from './playlists/playlists.module';
 import { UsersModule } from './users/users.module';
+import { ArtistsModule } from './artists/artists.module';
+import { SeedService } from './seed/seed.service';
+import { SeedModule } from './seed/seed.module';
 
 
 
@@ -30,11 +33,11 @@ import { UsersModule } from './users/users.module';
       synchronize: true
     }),
     SongsModule,
-    AuthModule,PlaylistsModule,UsersModule],
+    AuthModule,PlaylistsModule,UsersModule, ArtistsModule, SeedModule],
   controllers: [AppController],
   providers: [AppService,{provide: DevConfigService,
    useClass: DevConfigService
-  },
+  }, SeedService,
   //  {provide: 'CONNECTION', 
     // useValue: connection,},
   ],
