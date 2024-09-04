@@ -21,11 +21,11 @@ import { UsersModule } from './users/users.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      database:'spotify-clone',
+      database:process.env.DBNAME,
       host: 'localhost',
       port:5432,
       username:'postgres',
-      password:'donfiles.online',
+      password:process.env.PASSWORD,
       entities:[Song,Artist,User,Playlist],
       synchronize: true
     }),

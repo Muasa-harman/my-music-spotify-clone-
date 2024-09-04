@@ -44,7 +44,7 @@ export class SongsService {
     update(id: number,recordToUpdate: UpdateSongDto): Promise<UpdateResult>{
         return this.songsRepository.update(id, recordToUpdate);
     }
-    async paginate(){}
+    async paginate(p0: { page: number; limit: number; }){}
 
    
 
